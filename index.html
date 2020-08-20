@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>How many trees are there?</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+
+        <style>
+            * {
+                font-family: "Inter", sans-serif;
+                font-size: 1.2em;
+                text-align: center;
+
+                text-decoration: none;
+            }
+
+            #full {
+
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                -webkit-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                text-align: center;
+
+                font-family: sans-serif;
+            }
+
+            @media (prefers-color-scheme: dark) {
+                * {
+                    background-color: #121212;
+                    color: white;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="full" class="darkteme">
+            <a id="total">There are<br><strong>N/A</strong><br> trees worldwide. 🌳</a>
+
+            <br><br>
+            <a style="font-size: 0.8em">This is a <strong style="font-size: 1em;">problem</strong>. Help the </a>
+            <a style="font-size: 0.8em; font-weight: 600;" href="https://www.arborday.org/">Arbor Day Foundation (TeamTrees),</a>
+            <a style="font-size: 0.8em; font-weight: 600;" href="https://www.nature.org/en-us/">The Nature Conservancy</a>
+            <a style="font-size: 0.8em">or plant a tree.</a>
+        </div>
+
+        <script>
+            setInterval(function() {
+                // 3’204’668’000’000 in 2015, 475.64 lost per second
+                const seconds = (new Date().getTime() - new Date(2015, 1).getTime()) / 1000;
+
+                document.getElementById("total").innerHTML = "There are<br><strong>" + Math.round(3204668000000 - (seconds * 475.64)).toLocaleString("de-CH") + "</strong><br>trees worldwide. 🌳";
+            }, 10);
+        </script>
+    </body>
+</html>
