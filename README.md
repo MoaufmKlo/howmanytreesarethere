@@ -10,7 +10,7 @@ Go to <http://moaufmklo.github.io/howmanytreesarethere> to view the amount of tr
 
 The calculation itself is pretty simple and straight-forward:
 
-```Subtract the seconds between now and January of 2015 multiplied by the amount of trees farmed every second (475.64...)```
+```Subtract the seconds between now and January of 2015 multiplied by the amount of trees cut down every second (475.64...)```
 
 ## Contributing
 
