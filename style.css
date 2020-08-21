@@ -34,3 +34,10 @@ a:link {
         color: white;
     }
 }
+
+/* Mobile Font */
+@media only screen and (max-width: 420px) {
+    #total {
+      font-size: 1em;
+    }
+}
